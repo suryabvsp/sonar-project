@@ -1,4 +1,5 @@
 /*ver 1.1*/
+/*Work in progress*/
 
 // Includes the Servo library
 #include <Servo.h>. 
@@ -36,11 +37,11 @@ void loop() {
     for(int i=init_ang;i<=fin_ang;i++)
     {  
       myServo.write(i-offset);  //angle value to be passed to the servo library object for writing into the motor
-      delay(30);  //DELAY #1, contains time taken in motor movement to the next degree before calculating distance.
+      delay(30);  //DELAY #1, contains along with some unnecessary extra delay,the time taken in motor movement one degree to the next, before calculating distance.
       distance = calculateDistance();// Calls a function for calculating the distance measured by the Ultrasonic sensor for each degree
-      Serial.print(newang); // Sends the current degree into the Serial Port
+      Serial.print(i); // Sends the current degree into the Serial Port for graphical representation
       Serial.print(","); // Sends addition character right next to the previous value needed later in the Processing IDE for indexing
-      Serial.print(distance); // Sends the distance value into the Serial Port
+      Serial.print(distance); // Sends the distance value into the Serial Port for the graph
       Serial.print("."); // Sends addition character right next to the previous value needed later in the Processing IDE for indexing
     }
     // Repeats the previous lines from fin_ang to init_ang degrees
@@ -49,8 +50,7 @@ void loop() {
       myServo.write(i);
       delay(30);
       distance = calculateDistance();
-      int newang = i;//-(init_ang-0);
-      Serial.print(newang);
+      Serial.print(i);
       Serial.print(",");
       Serial.print(distance);
       Serial.print(".");
