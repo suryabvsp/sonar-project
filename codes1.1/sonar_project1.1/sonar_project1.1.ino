@@ -37,7 +37,7 @@ void loop() {
     for(int i=init_ang;i<=fin_ang;i++)
     {  
       myServo.write(i-offset);  //angle value to be passed to the servo library object for writing into the motor
-      delay(30);  //DELAY #1, contains along with some unnecessary extra delay,the time taken in motor movement one degree to the next, before calculating distance.
+      delay(30);//DELAY #1:for time taken in motor rotation for one degree before calculating distance
       distance = calculateDistance();// Calls a function for calculating the distance measured by the Ultrasonic sensor for each degree
       Serial.print(i); // Sends the current degree into the Serial Port for graphical representation
       Serial.print(","); // Sends addition character right next to the previous value needed later in the Processing IDE for indexing
@@ -48,7 +48,7 @@ void loop() {
     for(int i=fin_ang;i>init_ang;i--)
     {  
       myServo.write(i);
-      delay(30);
+      delay(30);  //DELAY #1
       distance = calculateDistance();
       Serial.print(i);
       Serial.print(",");
@@ -61,11 +61,10 @@ void loop() {
 // Function for calculating the distance measured by the Ultrasonic sensor
 int calculateDistance(){ 
   
-  digitalWrite(trigPin, LOW); 
-  delayMicroseconds(2);
-  // Sets the trigPin on HIGH state for 10 micro seconds
+  digitalWrite(trigPin, LOW); // trigPin needs a fresh LOW pulse before sending a HIGH pulse that can be detected from echoPin
+  delayMicroseconds(2);//DELAY #2:time for which low trig pulse is maintained before making it high
   digitalWrite(trigPin, HIGH); 
-  delayMicroseconds(10);
+  delayMicroseconds(10);//DELAY #3:Sets the trigPin on HIGH state for 10 micro seconds
   digitalWrite(trigPin, LOW);
   duration = pulseIn(echoPin, HIGH); // Reads the echoPin, returns the sound wave travel time in microseconds
   //distance= duration*0.034/2;
