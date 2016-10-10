@@ -14,6 +14,3 @@ ________________________
 Features - Initial arduino and processing code, with a 360 degrees graph for displaying position of obstacle.
 
 Delay used in code - 30ms+2us+10us+(Output of pulseIn)
-
-Issues :
-------
