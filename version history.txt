@@ -1,11 +1,19 @@
 Version 1.1
 ________________________
 
-FIXES:
------
+What's New:
+----------
+
 1. Introduced angle offset in the arduino code to rotate the graph with respect to orientation of set up about motor's axis of rotation.
 
-2. 
+2. Host the project on github for easier central access and better version control.
+
+
+
+FIXES:
+-----
+
+1. 
 
 ###############################################################################################
 Version 1.0
@@ -16,16 +24,18 @@ Initial arduino and processing code, with a 360 degrees graph for displaying pos
 
 Delay:(used in code)
 -----
-30ms+2us+10us+(Output of pulseIn)
+30ms+2us+10us+[Output of pulseIn]
 ###############################################################################################
 
 Issues to be fixed/features in later versions:
 _____________________________________________
 
+** Explain in added comments both the codes.
 * Display float values instead of ints in distance field in graph.
-* Host the project on github for easier central access and better version control
+* Host the project on github for easier central access and better version control	--> DONE
 * Find width of obstacle and hence identify separation between object and count them. Keep a count of objects in view (during a round of scan) and objects seen so far.
+* Count maybe displayed on an LED display.
 * Stream serial data to internet
-* Calibrate distance measurement to minimum error.
-* Minimise the reducable delay in the code
-* Utilise the 360 degrees graph for any angle orientation of the set up.	<-- FIXED
+** Calibrate distance measurement to minimum error.
+** Minimise the reducable delay in the code
+* Utilise the 360 degrees graph for any angle orientation of the set up.	--> DONE
