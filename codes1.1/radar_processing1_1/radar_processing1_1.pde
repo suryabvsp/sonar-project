@@ -117,7 +117,7 @@ void drawObject() {
 void drawLine() {
   pushMatrix();
   strokeWeight(8);
-  stroke(32,65,174);
+  stroke(32,65,174); //color for blue line
   translate(width/2,height-height*0.507); // moves the starting coordinates to new location
   line(0,0,(height-height*0.575)*cos(radians(iAngle)),-(height-height*0.575)*sin(radians(iAngle))); // draws the line according to the angle
   popMatrix();
@@ -157,7 +157,7 @@ void drawText() { // draws the texts on the screen
   noObject = "Object in Range";
   
   }
-  fill(0,0,0);
+  fill(0,0,0);  //black background of bottom text
   noStroke();
   rect(0, height-height*0.0521, width, height);
   fill(251,255,249);
@@ -178,7 +178,7 @@ void drawText() { // draws the texts on the screen
   text("        " + iDistance + " cm", width-width*0.185, height-height*0.0237);
   }
   textSize(19);
-  fill(7,7,6);
+  fill(7,7,6); //color for degrees text
   translate((width-width*0.5020)+width/2*cos(radians(30)),(height-height*0.5283)-width/2*sin(radians(30)));
   rotate(-radians(-60));
   text("30°",0,0);
