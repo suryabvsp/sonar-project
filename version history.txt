@@ -33,7 +33,8 @@ _____________________________________________
 ** Explain in added comments both the codes.
 * Display float values instead of ints in distance field in graph.
 * Host the project on github for easier central access and better version control	--> DONE
-* Find width of obstacle and hence identify separation between object and count them. Keep a count of objects in view (during a round of scan) and objects seen so far.
+* Find width of obstacle and hence identify separation between object and count them.   --> DONE with issues 
+* Keep a count of objects in view (during a round of scan) and objects seen so far.
 * Count may be displayed on an LED display.
 * Stream serial data to internet
 ** Calibrate distance measurement to minimum error.
