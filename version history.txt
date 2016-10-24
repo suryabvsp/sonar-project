@@ -6,14 +6,18 @@ What's New:
 
 1. Introduced angle offset in the arduino code to rotate the graph with respect to orientation of set up about motor's axis of rotation.
 
-2. Host the project on github for easier central access and better version control.
+2. Hosted the project on github for easier central access and better version control.
+
+3. Keep a count of objects in view (during a round of scan) and objects seen so far.
 
 
 
 FIXES:
 -----
 
-1. 
+1. Displays float values instead of ints in distance field in graph.
+2. Calibrated distance measurement to minimum error.
+
 
 ###############################################################################################
 Version 1.0
@@ -31,13 +35,13 @@ Issues to be fixed/new features in later versions:
 _____________________________________________
 
 ** Explain in added comments both the codes.
-* Display float values instead of ints in distance field in graph.
+* Display float values instead of ints in distance field in graph.	-->DONE
 * Host the project on github for easier central access and better version control	--> DONE
-* Find width of obstacle and hence identify separation between object and count them.    
-* Keep a count of objects in view (during a round of scan) and objects seen so far.     --> DONE with issues
+** Find width of obstacle and hence identify separation between object and count them.    
+* Keep a count of objects in view (during a round of scan) and objects seen so far.     --> DONE
 * Count may be displayed on an LED display.
 * Stream serial data to internet
-** Calibrate distance measurement to minimum error.
+** Calibrate distance measurement to minimum error.	--> DONE
 ** Minimise the reducable delay in the code
 * Utilise the 360 degrees graph for any angle orientation of the set up.	--> DONE
 * code flowchart

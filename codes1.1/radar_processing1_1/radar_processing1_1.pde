@@ -17,11 +17,12 @@ int iAngle;
 float iDistance;
 int index1=0;
 int index2=0;
-int objCount=0;
+int objCount=0,obctr=0;
 PFont orcFont;
-int angFlag=0;
-float prevAng=0;
+float angFlag=1.0;
+float prevAng=0,deltaAng=0;
 float maxDIST=12; //max distance of object in cms
+int wctr=0;
 void setup() {
   
  size (600, 700); // ***CHANGE THIS TO YOUR SCREEN RESOLUTION***
@@ -62,6 +63,17 @@ void serialEvent (Serial myPort) { // starts reading data from the Serial Port
     // converts the String variables into Integer
     iAngle = int(angle);
     iDistance = float(distance);
+    deltaAng=iAngle-prevAng;
+
+    if(deltaAng*angFlag<0.0)
+      objCount=0;
+    
+    //anticlockwise--deltaAng>0
+    //clockwise--deltaAng<0    
+    if(deltaAng>0.0)
+      angFlag=1.0;
+    else
+      angFlag=-1.0;
   }
   catch(Exception e){
         println("Error parsing:");
@@ -101,20 +113,6 @@ void drawRadar() {
   popMatrix();
 }
 
-void drawObject() {
-  pushMatrix();
-  translate(width/2,height-height*0.508); // moves the starting coordinats to new location
-  strokeWeight(8);
-  stroke(240,1,40); // red color
-  pixsDistance = iDistance*((height-height*0.1666)*0.013/3); // covers the distance from the sensor from cm to pixels
-  // limiting the range to 40 cms
-  if(iDistance<maxDIST){
-    // draws the object according to the angle and the distance
-  line(pixsDistance*cos(radians(iAngle)),-pixsDistance*sin(radians(iAngle)),(width-width*0.505)*cos(radians(iAngle)),-(width-width*0.505)*sin(radians(iAngle)));
-  }
-  popMatrix();
-}
-
 void drawLine() {
   pushMatrix();
   strokeWeight(8);
@@ -124,15 +122,43 @@ void drawLine() {
   popMatrix();
 }
 
+void drawObject() {
+  pushMatrix();
+  translate(width/2,height-height*0.508); // moves the starting coordinats to new location
+  strokeWeight(8);
+  stroke(240,1,40); // red color
+  pixsDistance = iDistance*((height-height*0.1666)*0.013/3); // covers the distance from the sensor from cm to pixels
+  if(iDistance<=maxDIST){
+    if(wctr>2){    //Assuming that an object will be thick enough to be detected for 2 degrees of rotation.
+      // draws the object according to the angle and the distance
+      line(pixsDistance*cos(radians(iAngle)),-pixsDistance*sin(radians(iAngle)),(width-width*0.505)*cos(radians(iAngle)),-(width-width*0.505)*sin(radians(iAngle)));
+      //if((deltaAng*angFlag)>0)
+          obctr++;
+    }
+  }
+  popMatrix();
+}
+
 void drawText() { // draws the texts on the screen
   pushMatrix();
   if(iDistance>maxDIST) {
-  noObject = "No object within Range";
+    noObject = "No object within Range";
+    wctr=0;
+    if(obctr>0){
+      objCount++;
+      obctr=0;
+    }
   }
   else {
-  noObject = "Object in Range";
-  }
- 
+    wctr++;
+    if(wctr>2)  //Assuming that an object will be thick enough to be detected for 2 degrees of rotation.
+    {
+      noObject = "Object in Range";
+      //if((deltaAng*angFlag)>0)
+      //  obctr++;
+    }
+  } 
+  //if
   fill(0,0,0);  //black background of bottom text
   noStroke();
   rect(0, height-height*0.0521, width, height);
@@ -149,8 +175,9 @@ void drawText() { // draws the texts on the screen
   text("Distance: ", width-width*0.26, height-height*0.0235);
   textSize(16);
   text(" No. of objects: "+ objCount +"", width-width*0.986, height-height*0.0714);
-  if(iDistance<maxDIST) {
-  text("        " + iDistance + " cm", width-width*0.185, height-height*0.0237);
+  if(iDistance<=maxDIST) {
+    if(wctr>2)
+      text("        " + iDistance + " cm", width-width*0.185, height-height*0.0237);
   }
   textSize(19);
   fill(7,7,6); //color for degrees text
