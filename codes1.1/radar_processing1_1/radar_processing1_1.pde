@@ -22,7 +22,7 @@ PFont orcFont;
 float angFlag=1.0;
 float prevAng=0,deltaAng=0;
 float maxDIST=12; //max distance of object in cms
-int wctr=0;
+int wctr=0,objWidth=0;
 void setup() {
   
  size (600, 700); // ***CHANGE THIS TO YOUR SCREEN RESOLUTION***
@@ -130,10 +130,10 @@ void drawObject() {
   pixsDistance = iDistance*((height-height*0.1666)*0.013/3); // covers the distance from the sensor from cm to pixels
   if(iDistance<=maxDIST){
     if(wctr>2){    //Assuming that an object will be thick enough to be detected for 2 degrees of rotation.
+      objWidth=0;
       // draws the object according to the angle and the distance
       line(pixsDistance*cos(radians(iAngle)),-pixsDistance*sin(radians(iAngle)),(width-width*0.505)*cos(radians(iAngle)),-(width-width*0.505)*sin(radians(iAngle)));
-      //if((deltaAng*angFlag)>0)
-          obctr++;
+      obctr++;
     }
   }
   popMatrix();
@@ -143,6 +143,7 @@ void drawText() { // draws the texts on the screen
   pushMatrix();
   if(iDistance>maxDIST) {
     noObject = "No object within Range";
+    objWidth=wctr;
     wctr=0;
     if(obctr>0){
       objCount++;
@@ -154,11 +155,10 @@ void drawText() { // draws the texts on the screen
     if(wctr>2)  //Assuming that an object will be thick enough to be detected for 2 degrees of rotation.
     {
       noObject = "Object in Range";
-      //if((deltaAng*angFlag)>0)
-      //  obctr++;
+    
     }
   } 
-  //if
+
   fill(0,0,0);  //black background of bottom text
   noStroke();
   rect(0, height-height*0.0521, width, height);

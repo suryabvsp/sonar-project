@@ -10,6 +10,8 @@ What's New:
 
 3. Keep a count of objects in view (during a round of scan) and objects seen so far.
 
+4. Exported as executable application for both windows and linux.
+
 
 
 FIXES:
