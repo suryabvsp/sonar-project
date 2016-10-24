@@ -13,14 +13,15 @@ String distance="";
 String data="";
 String noObject;
 float pixsDistance;
-int iAngle, iDistance;
+int iAngle;
+float iDistance;
 int index1=0;
 int index2=0;
-int countFlag=0;
-int objCount=0,Count_now=0;
+int objCount=0;
 PFont orcFont;
 int angFlag=0;
-int prevAng=0;
+float prevAng=0;
+float maxDIST=12; //max distance of object in cms
 void setup() {
   
  size (600, 700); // ***CHANGE THIS TO YOUR SCREEN RESOLUTION***
@@ -51,7 +52,7 @@ void draw() {
 void serialEvent (Serial myPort) { // starts reading data from the Serial Port
   // reads the data from the Serial Port up to the character '.' and puts it into the String variable "data".
   try{
-    data = myPort.readStringUntil('.');
+    data = myPort.readStringUntil(';');
     data = data.substring(0,data.length()-1);
     
     index1 = data.indexOf(","); // find the character ',' and puts it into the variable "index1"
@@ -60,7 +61,7 @@ void serialEvent (Serial myPort) { // starts reading data from the Serial Port
     
     // converts the String variables into Integer
     iAngle = int(angle);
-    iDistance = int(distance);
+    iDistance = float(distance);
   }
   catch(Exception e){
         println("Error parsing:");
@@ -107,7 +108,7 @@ void drawObject() {
   stroke(240,1,40); // red color
   pixsDistance = iDistance*((height-height*0.1666)*0.013/3); // covers the distance from the sensor from cm to pixels
   // limiting the range to 40 cms
-  if(iDistance<40*3){
+  if(iDistance<maxDIST){
     // draws the object according to the angle and the distance
   line(pixsDistance*cos(radians(iAngle)),-pixsDistance*sin(radians(iAngle)),(width-width*0.505)*cos(radians(iAngle)),-(width-width*0.505)*sin(radians(iAngle)));
   }
@@ -124,39 +125,14 @@ void drawLine() {
 }
 
 void drawText() { // draws the texts on the screen
-
-    if(iAngle<prevAng)
-      angFlag = 1;
-    else
-    {
-      if(angFlag==1)
-      {
-        Count_now=0;
-      angFlag = 0;
-      }
-    }
   pushMatrix();
-  if(iDistance>40*0.3) {
-    if(countFlag==1)
-    {
-      
-       countFlag = 0; 
-    }
+  if(iDistance>maxDIST) {
   noObject = "No object within Range";
   }
-  //For counting objects
   else {
-    if(countFlag==0)
-    {
-      objCount++;
-      Count_now++;
-      countFlag = 1;
-    }
-    
-     prevAng = iAngle; 
   noObject = "Object in Range";
-  
   }
+ 
   fill(0,0,0);  //black background of bottom text
   noStroke();
   rect(0, height-height*0.0521, width, height);
@@ -173,8 +149,7 @@ void drawText() { // draws the texts on the screen
   text("Distance: ", width-width*0.26, height-height*0.0235);
   textSize(16);
   text(" No. of objects: "+ objCount +"", width-width*0.986, height-height*0.0714);
-  text(" No. of objects now: "+ Count_now +"", width-width*0.986, height-height*0.1714);
-  if(iDistance<40*0.3) {
+  if(iDistance<maxDIST) {
   text("        " + iDistance + " cm", width-width*0.185, height-height*0.0237);
   }
   textSize(19);
@@ -227,4 +202,5 @@ void drawText() { // draws the texts on the screen
   rotate(radians(-270));
     text("0°",0,0);
   popMatrix(); 
+  prevAng = iAngle;
 }
