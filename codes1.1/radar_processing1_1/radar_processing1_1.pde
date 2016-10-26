@@ -13,19 +13,26 @@ String distance="";
 String data="";
 String noObject;
 float pixsDistance;
-int iAngle, iDistance;
+int iAngle;
+float iDistance;
 int index1=0;
 int index2=0;
-int countFlag=0;
-int objCount=0,Count_now=0;
+int objCount=0,obctr=0;
 PFont orcFont;
-int angFlag=0;
-int prevAng=0;
+float angFlag=1.0;
+float prevAng=0,deltaAng=0;
+float maxDIST=12; //max distance of object in cms
+int wctr=0;
+float objWidth=0.0,prevWidth=0.0;
 void setup() {
   
  size (600, 700); // ***CHANGE THIS TO YOUR SCREEN RESOLUTION***
  smooth();
+<<<<<<< HEAD
  myPort = new Serial(this,"/dev/ttyACM1", 9600); // Enter the COM Port address as COM4 or COM 22.starts the serial communication
+=======
+ myPort = new Serial(this,"COM3", 9600); // Enter the COM Port address as COM4 or COM 22.starts the serial communication
+>>>>>>> e52d142c4ad43d3076beee87554b72ac501881c9
  myPort.bufferUntil('.'); // reads the data from the serial port up to the character '.'. So actually it reads this: angle,distance.
  orcFont = loadFont("CenturySchL-Ital-20.vlw");
 
@@ -51,7 +58,7 @@ void draw() {
 void serialEvent (Serial myPort) { // starts reading data from the Serial Port
   // reads the data from the Serial Port up to the character '.' and puts it into the String variable "data".
   try{
-    data = myPort.readStringUntil('.');
+    data = myPort.readStringUntil(';');
     data = data.substring(0,data.length()-1);
     
     index1 = data.indexOf(","); // find the character ',' and puts it into the variable "index1"
@@ -60,7 +67,18 @@ void serialEvent (Serial myPort) { // starts reading data from the Serial Port
     
     // converts the String variables into Integer
     iAngle = int(angle);
-    iDistance = int(distance);
+    iDistance = float(distance);
+    deltaAng=iAngle-prevAng;
+
+    if(deltaAng*angFlag<0.0)
+      objCount=0;
+    
+    //anticlockwise--deltaAng>0
+    //clockwise--deltaAng<0    
+    if(deltaAng>0.0)
+      angFlag=1.0;
+    else
+      angFlag=-1.0;
   }
   catch(Exception e){
         println("Error parsing:");
@@ -100,20 +118,6 @@ void drawRadar() {
   popMatrix();
 }
 
-void drawObject() {
-  pushMatrix();
-  translate(width/2,height-height*0.508); // moves the starting coordinats to new location
-  strokeWeight(8);
-  stroke(240,1,40); // red color
-  pixsDistance = iDistance*((height-height*0.1666)*0.013/3); // covers the distance from the sensor from cm to pixels
-  // limiting the range to 40 cms
-  if(iDistance<40*3){
-    // draws the object according to the angle and the distance
-  line(pixsDistance*cos(radians(iAngle)),-pixsDistance*sin(radians(iAngle)),(width-width*0.505)*cos(radians(iAngle)),-(width-width*0.505)*sin(radians(iAngle)));
-  }
-  popMatrix();
-}
-
 void drawLine() {
   pushMatrix();
   strokeWeight(8);
@@ -123,40 +127,47 @@ void drawLine() {
   popMatrix();
 }
 
-void drawText() { // draws the texts on the screen
-
-    if(iAngle<prevAng)
-      angFlag = 1;
-    else
-    {
-      if(angFlag==1)
-      {
-        Count_now=0;
-      angFlag = 0;
-      }
-    }
+void drawObject() {
   pushMatrix();
-  if(iDistance>40*0.3) {
-    if(countFlag==1)
-    {
-      
-       countFlag = 0; 
+  translate(width/2,height-height*0.508); // moves the starting coordinats to new location
+  strokeWeight(8);
+  stroke(240,1,40); // red color
+  pixsDistance = iDistance*((height-height*0.1666)*0.013/3); // covers the distance from the sensor from cm to pixels
+  if(iDistance<=maxDIST){
+    if(wctr>2){    //Assuming that an object will be thick enough to be detected for 2 degrees of rotation.
+      objWidth=0.0;
+      // draws the object according to the angle and the distance
+      line(pixsDistance*cos(radians(iAngle)),-pixsDistance*sin(radians(iAngle)),(width-width*0.505)*cos(radians(iAngle)),-(width-width*0.505)*sin(radians(iAngle)));
+      obctr++;
     }
-  noObject = "No object within Range";
   }
-  //For counting objects
-  else {
-    if(countFlag==0)
-    {
+  popMatrix();
+}
+
+void drawText() { // draws the texts on the screen
+  pushMatrix();
+  if(iDistance>maxDIST) {
+    noObject = "No object within Range";
+    if(wctr==0)
+      objWidth=prevWidth;
+    else
+      objWidth=float(wctr)*iDistance*0.0174;  //width of object in cm
+    prevWidth=objWidth;
+    wctr=0;
+    if(obctr>0){
       objCount++;
-      Count_now++;
-      countFlag = 1;
+      obctr=0;
     }
-    
-     prevAng = iAngle; 
-  noObject = "Object in Range";
-  
   }
+  else {
+    wctr++;
+    if(wctr>2)  //Assuming that an object will be thick enough to be detected for 2 degrees of rotation.
+    {
+      noObject = "Object in Range";
+    
+    }
+  } 
+
   fill(0,0,0);  //black background of bottom text
   noStroke();
   rect(0, height-height*0.0521, width, height);
@@ -173,9 +184,10 @@ void drawText() { // draws the texts on the screen
   text("Distance: ", width-width*0.26, height-height*0.0235);
   textSize(16);
   text(" No. of objects: "+ objCount +"", width-width*0.986, height-height*0.0714);
-  text(" No. of objects now: "+ Count_now +"", width-width*0.986, height-height*0.1714);
-  if(iDistance<40*0.3) {
-  text("        " + iDistance + " cm", width-width*0.185, height-height*0.0237);
+  text(" Object Width: "+ objWidth +"", width-width*0.986, height-height*0.1714);
+  if(iDistance<=maxDIST) {
+    if(wctr>2)
+      text("        " + iDistance + " cm", width-width*0.185, height-height*0.0237);
   }
   textSize(19);
   fill(7,7,6); //color for degrees text
@@ -227,4 +239,5 @@ void drawText() { // draws the texts on the screen
   rotate(radians(-270));
     text("0°",0,0);
   popMatrix(); 
+  prevAng = iAngle;
 }
