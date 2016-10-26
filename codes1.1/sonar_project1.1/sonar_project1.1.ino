@@ -68,6 +68,6 @@ int calculateDistance(){
   digitalWrite(trigPin, LOW);
   duration = pulseIn(echoPin, HIGH); // Reads the echoPin, returns the sound wave travel time in microseconds
   //distance= duration*0.034/2;
-  distance = (duration/2)/29.1;     //in cm
+  distance = (duration/2)/29.1;     //in cm  datasheet gives duration/58 as the formula, we changed it by our calibration
   return distance;
 }
