@@ -1,5 +1,6 @@
 /*   Arduino Radar Project
  *    1.1
+ *   Initialise every variable to null value to avoid null pointer exception
  */
 
 import processing.serial.*; // imports library for serial communication
@@ -11,28 +12,26 @@ Serial myPort; // defines Object Serial
 String angle="";
 String distance="";
 String data="";
-String noObject;
-float pixsDistance;
-int iAngle;
-float iDistance;
+String noObject="";
+float pixsDistance=0.0;
+int iAngle=0;
+float iDistance=0.0;
 int index1=0;
 int index2=0;
 int objCount=0,obctr=0;
 PFont orcFont;
 float angFlag=1.0;
-float prevAng=0,deltaAng=0;
-float maxDIST=12; //max distance of object in cms
+float prevAng=0.0,deltaAng=0.0;
+float maxDIST=50.0; //max distance of object in cms
 int wctr=0;
 float objWidth=0.0,prevWidth=0.0;
 void setup() {
   
  size (600, 700); // ***CHANGE THIS TO YOUR SCREEN RESOLUTION***
  smooth();
-<<<<<<< HEAD
- myPort = new Serial(this,"/dev/ttyACM1", 9600); // Enter the COM Port address as COM4 or COM 22.starts the serial communication
-=======
- myPort = new Serial(this,"COM3", 9600); // Enter the COM Port address as COM4 or COM 22.starts the serial communication
->>>>>>> e52d142c4ad43d3076beee87554b72ac501881c9
+
+ myPort = new Serial(this,"/dev/ttyACM0", 9600); // Enter the COM Port address as COM4 or COM 22.starts the serial communication
+
  myPort.bufferUntil('.'); // reads the data from the serial port up to the character '.'. So actually it reads this: angle,distance.
  orcFont = loadFont("CenturySchL-Ital-20.vlw");
 
@@ -70,9 +69,10 @@ void serialEvent (Serial myPort) { // starts reading data from the Serial Port
     iDistance = float(distance);
     deltaAng=iAngle-prevAng;
 
-    if(deltaAng*angFlag<0.0)
+    if(deltaAng*angFlag<0.0){
       objCount=0;
-    
+      objWidth=0;
+    }
     //anticlockwise--deltaAng>0
     //clockwise--deltaAng<0    
     if(deltaAng>0.0)

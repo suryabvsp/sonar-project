@@ -1,0 +1,7 @@
+max current thru 5V is 800ma,
+Running current with 5V supply (no mechanical load) 	220 ±50mA
+Stall current with 5V supply (horn locked) 	650 ±80mA
+Idle current with 5V supply 	6 ±10mA 
+
+max current thru laptop usb is 
+In the USB 1.0 and 2.0 specs, a standard downstream port is capable of delivering up to 500mA (0.5A); with USB 3.0, it moves up to 900mA (0.9A). The charging downstream and dedicated charging ports provide up to 1,500mA (1.5A).

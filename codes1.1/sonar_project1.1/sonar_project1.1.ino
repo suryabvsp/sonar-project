@@ -17,7 +17,7 @@ int offset = 0;
 //Initial and final angles of motor's rotation
 //Note that the motor can only take values 0-180.
 //Make sure init_angle-offset >=60 to avoid jumper wire obstruction.
-int init_ang = 60+offset;
+int init_ang = 120+offset;
 int fin_ang = 180+offset;
 
 // Declares a structure variable/object of the type Servo,
@@ -38,7 +38,7 @@ void loop() {
     for(int i=init_ang;i<=fin_ang;i++)
     {  
       myServo.write(i-offset);  //angle value to be passed to the servo library object for writing into the motor
-      delay(30);//DELAY #1:for time taken in motor rotation for one degree before calculating distance
+      delay(17);//DELAY #1:for time taken in motor rotation for one degree before calculating distance
       distance = calculateDistance();// Calls a function for calculating the distance measured by the Ultrasonic sensor for each degree
       Serial.print(i); // Sends the current degree into the Serial Port for graphical representation
       Serial.print(","); // Sends addition character right next to the previous value needed later in the Processing IDE for indexing
@@ -49,7 +49,7 @@ void loop() {
     for(int i=fin_ang;i>init_ang;i--)
     {  
       myServo.write(i);
-      delay(30);  //DELAY #1
+      delay(17);  //DELAY #1 //can be minimised to 17 or 1667 microsec
       distance = calculateDistance();
       Serial.print(i);
       Serial.print(",");
@@ -60,6 +60,7 @@ void loop() {
 }
 // Function for calculating the distance measured by the Ultrasonic sensor
 float calculateDistance(){ 
+  unsigned long T1 = micros();
   digitalWrite(trigPin, LOW); // trigPin needs a fresh LOW pulse before sending a HIGH pulse that can be detected from echoPin
   delayMicroseconds(2);//DELAY #2:time for which low trig pulse is maintained before making it high
   digitalWrite(trigPin, HIGH); 
@@ -67,7 +68,14 @@ float calculateDistance(){
   digitalWrite(trigPin, LOW);
   duration = pulseIn(echoPin, HIGH); // Reads the echoPin, returns the sound wave travel time in microseconds
   //distance= duration*0.034/2;
-  distance = (duration/2)/29.1;     //in cm,  datasheet gives duration/58 as the formula, we changed it by our calibration
-
+  distance = (duration/2)/29.1;     //in cm,  datasheet gives "duration/58" as the formula
+  
+  //To avoid sending data at variable time intervals due to varying time duration taken between execution of above code inside this function depending on distance of obstacle
+  //if no object, echo pulse is 38ms long HIGH
+  while(micros()-T1<38000)
+  {
+    ;
+  }
+  
   return distance;
 }
