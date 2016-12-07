@@ -17,7 +17,7 @@ int offset = 0;
 //Initial and final angles of motor's rotation
 //Note that the motor can only take values 0-180.
 //Make sure init_angle-offset >=60 to avoid jumper wire obstruction.
-int init_ang = 120+offset;
+int init_ang = 70+offset;
 int fin_ang = 180+offset;
 
 // Declares a structure variable/object of the type Servo,
