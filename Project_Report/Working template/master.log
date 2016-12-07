@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.27)  7 DEC 2016 17:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.27)  7 DEC 2016 21:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1260,12 +1260,7 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count330
 \@quotereset=\count331
-(./master.aux
-Package biblatex Info: Trying to load language 'danish'...
-Package biblatex Info: ... file 'danish.lbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/danish.lbx
-File: danish.lbx 2016/03/03 v3.3 biblatex localization (PK/JW/AB)
-))
+(./master.aux)
 \openout1 = `master.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -1434,9 +1429,18 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 6.25204pt on input line 21.
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/pplx/b/n' tried instead on input line 28.
+LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10.95> not available
+(Font)              Font shape `T1/pplx/m/it' tried instead on input line 59.
+LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <14.4> not available
+(Font)              Font shape `T1/pplx/m/it' tried instead on input line 59.
+LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <12> not available
+(Font)              Font shape `T1/pplx/m/it' tried instead on input line 61.
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <9> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 87.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./sections/colophon.tex
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]) (./sections/colophon.
+tex
 LaTeX Font Info:    Try loading font information for OMS+pplx on input line 4.
 LaTeX Font Info:    No file OMSpplx.fd. on input line 4.
 
@@ -1444,13 +1448,13 @@ LaTeX Font Info:    No file OMSpplx.fd. on input line 4.
 LaTeX Font Warning: Font shape `OMS/pplx/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead on input line 4.
 
-[2
+[3
 
 ]) (./sections/titlepages.tex
 \titlepageleftcolumnwidth=\skip82
 \titlepagerightcolumnwidth=\skip83
 
-<figures/aau_logo_en.pdf, id=67, 115.43124pt x 77.28876pt>
+<figures/aau_logo_en.pdf, id=69, 115.43124pt x 77.28876pt>
 File: figures/aau_logo_en.pdf Graphic file (type pdf)
 
 <use figures/aau_logo_en.pdf>
@@ -1472,57 +1476,24 @@ Overfull \hbox (3.18648pt too wide) in paragraph at lines 31--31
 [] 
  []
 
-[3
+[4
 
- <./figures/aau_logo_en.pdf>] [4
-
-
-
-]
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 35.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 35.
-
-<figures/aau_logo_da.pdf, id=84, 121.45375pt x 77.28876pt>
-File: figures/aau_logo_da.pdf Graphic file (type pdf)
-
-<use figures/aau_logo_da.pdf>
-Package pdftex.def Info: figures/aau_logo_da.pdf used on input line 65.
-(pdftex.def)             Requested size: 194.59193pt x 123.8308pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--65
-
- []
-
-
-Overfull \hbox (3.18648pt too wide) in paragraph at lines 65--65
-[] 
- []
-
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 65.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 65.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 65.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 65.
-[5 <./figures/aau_logo_da.pdf>]) [6
-
-
-
-]
+ <./figures/aau_logo_en.pdf>])
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/pplx/b/n' tried instead on input line 31.
  (./master.toc)
 \tf@toc=\write6
 \openout6 = `master.toc'.
 
- [7
+ [5
 
 
-] [8
+
+
+
+
+
+] [6
 
 
 ] (./master.tdo)
@@ -1530,10 +1501,10 @@ LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <20.74> not available
 \openout7 = `master.tdo'.
 
 
-(./sections/preface.tex [9] [10
+(./sections/preface.tex [7] [8
 
 
-]) [11] [12
+]) [9] [10
 
 
 ] (./sections/introduction.tex
@@ -1612,7 +1583,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 44.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 44.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 44.
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: 1C5710B4E15FBCDC0BEA814F9631195D;716.
+(rerunfilecheck)             Checksum: 61F36CD262D474A229D2415DFD93E306;652.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1631,27 +1602,27 @@ Package logreq Info: Writing requests to 'master.run.xml'.
  )
 (\end occurred when \iftrue on line 21 was incomplete) 
 Here is how much of TeX's memory you used:
- 24764 strings out of 494374
- 442218 string characters out of 6164953
- 776823 words of memory out of 5000000
- 27529 multiletter control sequences out of 15000+600000
- 48959 words of font info for 83 fonts, out of 8000000 for 9000
+ 24771 strings out of 494374
+ 442105 string characters out of 6164953
+ 751824 words of memory out of 5000000
+ 27535 multiletter control sequences out of 15000+600000
+ 59372 words of font info for 95 fonts, out of 8000000 for 9000
  355 hyphenation exceptions out of 8191
- 64i,14n,80p,895b,2770s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,14n,80p,895b,1654s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/surya/.texmf-var/
-fonts/pk/ljfour/jknappen/ec/ectt1095.600pk>{/usr/share/texlive/texmf-dist/fonts
-/enc/dvips/base/8r.enc} </home/surya/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecs
-s1000.600pk> </home/surya/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecsx1000.600pk
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/surya/.texmf-var/fonts/pk/lj
+four/jknappen/ec/ecss1000.600pk> </home/surya/.texmf-var/fonts/pk/ljfour/jknapp
+en/ec/ecsx1000.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
+}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
 w/palatino/uplri8a.pfb>
-Output written on master.pdf (19 pages, 118760 bytes).
+Output written on master.pdf (17 pages, 109560 bytes).
 PDF statistics:
- 274 PDF objects out of 1000 (max. 8388607)
- 193 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
- 119 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 255 PDF objects out of 1000 (max. 8388607)
+ 179 compressed objects within 2 object streams
+ 40 named destinations out of 1000 (max. 500000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

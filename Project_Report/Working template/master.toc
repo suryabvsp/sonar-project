@@ -2,11 +2,7 @@
 \defcounter {refsection}{0}\relax 
 \select@language {english}
 \defcounter {refsection}{0}\relax 
-\select@language {danish}
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Preface}{xi}{chapter*.3}
+\contentsline {chapter}{Preface}{ix}{chapter*.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \defcounter {refsection}{0}\relax 
@@ -16,11 +12,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.1}This is a Subsection}{1}{subsection.1.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{This is a Subsubsection}{1}{subsubsection*.4}
+\contentsline {subsubsection}{This is a Subsubsection}{1}{subsubsection*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{A Paragraph}{1}{paragraph*.5}
+\contentsline {paragraph}{A Paragraph}{1}{paragraph*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{A Subparagraph}{2}{subparagraph*.6}
+\contentsline {subparagraph}{A Subparagraph}{2}{subparagraph*.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Chapter 2 name}{3}{chapter.2}
 \defcounter {refsection}{0}\relax 
