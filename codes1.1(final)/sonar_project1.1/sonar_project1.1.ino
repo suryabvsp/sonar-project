@@ -1,5 +1,4 @@
-/*ver 1.1*/
-/*Work in progress*/
+/*ver 1.1 (Final)*/
 
 // Includes the Servo library
 #include <Servo.h>. 

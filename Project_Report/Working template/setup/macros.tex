@@ -37,10 +37,8 @@
     \noindent%
     \begin{tabular}{@{}ll@{}}
       \parbox{\titlepageleftcolumnwidth}{
-        \iflanguage{danish}{%
-          \includegraphics[width=\titlepageleftcolumnwidth]{figures/aau_logo_da}
-        }{%
-          \includegraphics[width=\titlepageleftcolumnwidth]{figures/aau_logo_en}
+        {%
+          \includegraphics[width=\titlepageleftcolumnwidth/2]{figures/logo2}
         }
       } &
       \parbox{\titlepagerightcolumnwidth}{\raggedleft\sf\small
@@ -49,33 +47,28 @@
        #1 &
       \parbox[t]{\titlepagerightcolumnwidth}{%
       \textbf{Abstract:}\bigskip\par
-        \fbox{\parbox{\titlepagerightcolumnwidth-2\fboxsep-2\fboxrule}{%
+        \parbox{\titlepagerightcolumnwidth-2\fboxsep-2\fboxrule}{%
           #3
-        }}
+        }
       }\\
     \end{tabular}
     \vfill
-    \iflanguage{danish}{%
-      \noindent{\footnotesize\emph{Rapportens indhold er frit tilgængeligt, men offentliggørelse (med kildeangivelse) må kun ske efter aftale med forfatterne.}}
-    }{%
+    {%
       \noindent{\footnotesize\emph{The content of this report is freely available, but publication (with reference) may only be pursued due to agreement with the author.}}
     }
     \clearpage
   }
 }
 
-%Create english project info
-\newcommand{\englishprojectinfo}[8]{%
+\newcommand{\englishprojectinfo}[6]{%
   \parbox[t]{\titlepageleftcolumnwidth}{
     \textbf{Title:}\\ #1\bigskip\par
     \textbf{Theme:}\\ #2\bigskip\par
     \textbf{Project Period:}\\ #3\bigskip\par
     \textbf{Project Group:}\\ #4\bigskip\par
-    \textbf{Participant(s):}\\ #5\bigskip\par
-    \textbf{Supervisor(s):}\\ #6\bigskip\par
-    \textbf{Copies:} #7\bigskip\par
+    \textbf{Supervisor:}\\ #5\bigskip\par
     \textbf{Page Numbers:} \pageref{LastPage}\bigskip\par
-    \textbf{Date of Completion:}\\ #8
+    \textbf{Date of Completion:}\\ #6
   }
 }
 
@@ -93,3 +86,27 @@
 }{%
 		\end{exa}
 }
+\newcommand{\arduinouno}{\emph{Arduino UNO}}
+\newcommand{\arduino}{\emph{Arduino}}
+\newcommand{\servo}{\emph{Micro-Servo}}
+\newcommand{\hcsr}{\textit{HC-SR04}}
+\newcommand{\ultrasonic}{\emph{Ultrasonic Sensor}}
+\newcommand{\motor}{\textit{Motor}}
+\newcommand{\usart}{\textit{USART}}
+\newcommand{\processing}{\emph{Processing}}
+
+\lstdefinestyle{customc}{
+	belowcaptionskip=1\baselineskip,
+	breaklines=true,
+	%frame=L,
+	%xleftmargin=\parindent,
+	language=C,
+	showstringspaces=false,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{green!40!black},
+	commentstyle=\ttfamily\color{white!40!black},
+	identifierstyle=\color{light-blue},
+	stringstyle=\color{orange},
+}
+\lstset{escapechar=@,style=customc}
+

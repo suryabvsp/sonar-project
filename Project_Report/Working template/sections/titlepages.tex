@@ -1,33 +1,32 @@
 \pdfbookmark[0]{English title page}{label:titlepage_en}
 \aautitlepage{%
   \englishprojectinfo{
-    Project Title %title
+    Object Detection using SONAR based system %title
   }{%
-    Scientific Theme %theme
+    Embedded Systems %theme
   }{%
-    Fall Semester 2010 %project period
-  }{%
-    XXX % project group
+    Odd Semester 2016 %project period
   }{%
     %list of group members
-    Author 1\\ 
-    Author 2\\
-    Author 3
+    Resu Nikhil Reddy\\ 
+    Sumit Sapra\\
+    Surya Prakash Venkat
   }{%
     %list of supervisors
-    Supervisor 1\\
-    Supervisor 2
-  }{%
-    1 % number of printed copies
+    Dr. M. V. Deepak Nair
   }{%
     \today % date of completion
   }%
 }{%department and address
-  \textbf{Electronics and IT}\\
-  Aalborg University\\
-  \href{http://www.aau.dk}{http://www.aau.dk}
+  The LNM Institute of Information Technology\\
+  Jaipur, India\\
+  \textcolor{blue}{\underline{\href{http://www.lnmiit.ac.in}{http://www.lnmiit.ac.in}} }
 }{% the abstract
-  Here is the abstract
+  The goal is to develop an object detection system which could determine the presence of objects in it's vicinity. \medskip\\
+  
+  The system leverages the \hcsr{} \ultrasonic{} mounted on top of a \servo motor, both being controlled by an \arduinouno. The HC-SR04 detects its separation from an obstacle placed in front of it and sends the data to the Arduino, while the servo rotates the sensor about its axis in order to have a field of view that sweeps over a sector with a radius specified within 4 metres. \medskip\\
+  
+  The \arduino{} recieves sensor readings (distance measurements) from the sensor and sends it via \usart{} to a computer for graphical display using the \processing{} IDE.   
 }
 
 \cleardoublepage

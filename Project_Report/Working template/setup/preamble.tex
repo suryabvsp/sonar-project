@@ -14,7 +14,7 @@
 %
 %  You can find the GNU General Public License at <http://www.gnu.org/licenses/>.
 %
-\documentclass[11pt,twoside,a4paper,openright]{report}
+\documentclass[11pt,twoside,a4paper,openany]{report}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Language, Encoding and Fonts
 % http://en.wikibooks.org/wiki/LaTeX/Internationalization
@@ -34,6 +34,8 @@
 % Make latex understand and use the typographic
 % rules of the language used in the document.
 \usepackage[danish,english]{babel}
+% hide border around links
+\usepackage[hidelinks]{hyperref}
 % Use the palatino font
 \usepackage[sc]{mathpazo}
 \linespread{1.05}         % Palatino needs more leading (space between lines)
@@ -86,9 +88,9 @@
   outer=41mm,% right margin on an odd page
   ]{geometry}
 % Modify how \chapter, \section, etc. look
-% The titlesec package is very configureable
+% The titlesec package is very configureable [display] \chaptertitlename\
 \usepackage{titlesec}
-\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\chapter}{\normalfont\huge\bfseries}{ \thechapter}{20pt}{\Huge}
 \titleformat*{\section}{\normalfont\Large\bfseries}
 \titleformat*{\subsection}{\normalfont\large\bfseries}
 \titleformat*{\subsubsection}{\normalfont\normalsize\bfseries}
@@ -143,7 +145,8 @@
   textwidth=\marginparwidth, %set the width of the todonotes
   textsize=scriptsize, %size of the text in the todonotes
   ]{todonotes}
-
+% For typesetting C codes
+\usepackage{listings}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Hyperlinks
 % http://en.wikibooks.org/wiki/LaTeX/Hyperlinks
@@ -152,6 +155,12 @@
 % file. Hypperref should be loaded as one of the 
 % last packages
 \usepackage{hyperref}
+\usepackage{xcolor} %custom colours
+\usepackage{mdframed} %nice frames
+
+\definecolor{light-gray}{gray}{0.95} %the shade of grey that stack exchange uses
+\definecolor{light-blue}{HTML}{2E86C1} 
+\renewcommand{\labelitemii}{$\star$}
 \hypersetup{%
 	pdfpagelabels=true,%
 	plainpages=false,%
@@ -166,3 +175,6 @@
 	urlcolor=black,%
 	pdfstartview=FitH%
 }
+% for symb
+\usepackage{gensymb}  
+\usepackage{float}  

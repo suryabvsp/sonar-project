@@ -1,5 +1,5 @@
 /*   Arduino Radar Project
- *    1.1
+ *    1.1 [Final and complete]
  *   Initialise every variable to null value to avoid null pointer exception
  */
 

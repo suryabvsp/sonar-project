@@ -2,24 +2,26 @@
 \defcounter {refsection}{0}\relax 
 \select@language {english}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Preface}{ix}{chapter*.4}
+\contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}The \emph {Arduino UNO}}{2}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Examples}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Why Arduino?}{3}{subsection.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}How Does Sections, Subsections, and Subsections Look?}{1}{section.1.2}
+\contentsline {paragraph}{\textit {Support -}}{3}{subsection.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.1}This is a Subsection}{1}{subsection.1.2.1}
+\contentsline {paragraph}{\textit {Cost Effective -}}{3}{subsection.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{This is a Subsubsection}{1}{subsubsection*.5}
+\contentsline {paragraph}{\textit {Features -}}{3}{subsection.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{A Paragraph}{1}{paragraph*.6}
+\contentsline {section}{\numberline {1.2}Examples}{4}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{A Subparagraph}{2}{subparagraph*.7}
+\contentsline {subparagraph}{A Subparagraph}{4}{equation.1.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Chapter 2 name}{3}{chapter.2}
+\contentsline {chapter}{\numberline {2}Chapter 2 name}{5}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Conclusion}{5}{chapter.3}
+\contentsline {chapter}{\numberline {3}Conclusion}{6}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Appendix A name}{7}{appendix.A}
+\contentsline {chapter}{\numberline {A}Appendix A : \emph {Arduino}{} Code}{7}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Appendix B : \emph {Processing}{} Code}{10}{appendix.B}
