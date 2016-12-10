@@ -1,0 +1,65 @@
+\chapter{Explaining the Codes}
+Here we'd be briefly going through the flow of the codes written for \arduino{} and in \emph{Processing}. The entire Arduino and Processing codes are given (explained with comments) in Appendix \ref{ch:appAlabel} and Appendix \ref{ch:appBlabel}, respectively.
+\section{The Arduino Code}
+Every \arduino{} code consists of two standard functions - \textit{void setup()} and \textit{void loop()}. The former is used to define and initialise variables, pins and the baud rate of serial communication.\\
+We have programmed the Arduino to control the circuit in the following flow:
+\begin{enumerate}
+	\item Rotate the motor to an angle,
+	\item Use the ultrasonic sensor and calculate the distance,
+	\item Send both the above values via serial communication,
+	\item Rotate the motor to the next degree,
+	\item Repeat steps 2-5.
+\end{enumerate}
+The following code snippets implement the above given steps:
+\begin{mdframed}[backgroundcolor=light-gray, roundcorner=10pt,leftmargin=1, rightmargin=1, innerleftmargin=15, innertopmargin=15,innerbottommargin=15, outerlinewidth=1, linecolor=light-gray]
+	\begin{lstlisting}[caption={Step 1},language = C]
+	// rotates the servo motor from init_ang to fin_ang degrees
+	for(int i=init_ang;i<=fin_ang;i++)
+	{  
+	myServo.write(i-offset);  //angle value to be passed to the servo library object for writing into the motor
+	delay(17);//DELAY #1:for time taken in motor rotation for one degree before calculating distance
+	\end{lstlisting}
+	
+\begin{lstlisting}[caption={Step 2},language = C]
+	distance = calculateDistance();// Calls a function for calculating the distance measured by the Ultrasonic sensor for each degree
+	\end{lstlisting}
+	
+\begin{lstlisting}[caption={Function called above},language = C]
+	// Function for calculating the distance measured by the Ultrasonic sensor
+	float calculateDistance(){ 
+	unsigned long T1 = micros();
+	digitalWrite(trigPin, LOW); // trigPin needs a fresh LOW pulse before sending a HIGH pulse that can be detected from echoPin
+	delayMicroseconds(2);//DELAY #2:time for which low trig pulse is maintained before making it high
+	digitalWrite(trigPin, HIGH); 
+	delayMicroseconds(10);//DELAY #3:Sets the trigPin on HIGH state for 10 micro seconds
+	digitalWrite(trigPin, LOW);
+	duration = pulseIn(echoPin, HIGH); // Reads the echoPin, returns the sound wave travel time in microseconds
+	//distance= duration*0.034/2;
+	distance = (duration/2)/29.1;     //in cm,  datasheet gives "duration/58" as the formula
+	\end{lstlisting}
+	
+\begin{lstlisting}[caption={Step 3},language = C]
+	Serial.print(i); // Sends the current degree into the Serial Port for graphical representation
+	Serial.print(","); // Sends addition character right next to the previous value needed later in the Processing IDE for indexing
+	Serial.print(distance); // Sends the distance value into the Serial Port for the graph
+	Serial.print(";"); // Sends addition character right next to the previous value needed later in the Processing IDE for indexing
+\end{lstlisting}
+\end{mdframed}
+\vspace{1cm}
+Keeping the above code in a \texttt{void loop(){}} ensures that the steps get repeated in a loop, as desired.
+\clearpage
+\section{The Processing Code}
+The JAVA code written for processing divides its work into a few main functions, which are customary for every code written in Processing. The functions are
+\begin{itemize}
+	\item \begin{verbatim}void setup()\end{verbatim} - to initialise variables and baud rate of serial communication,
+	\item \begin{verbatim}void draw()\end{verbatim} - to make a 2D/3D drawing on the screen on which to show the output,
+	\item \begin{verbatim}void serialEvent()\end{verbatim} - the function dealing with incoming/outgoing serial data, and operations on it.
+\end{itemize}
+Customised functions were used to draw several parts of the displayed graph, which were called from \texttt{void draw()}. These are :
+\begin{itemize}
+	\item \begin{verbatim}void drawRadar()\end{verbatim} - to draw the basic circular layer of graphics
+	\item \begin{verbatim}void drawLine()\end{verbatim} - to draw a line with trails which would be used to sweep over the area implying scanning
+	\item \begin{verbatim}void drawObject()\end{verbatim} - to draw a colored line over the scanning figure to indicate presence of an object, whose length would be dependant on the distance of the object from the sensor
+	\item \begin{verbatim}void drawText()\end{verbatim} - to place text at different places on the map to show the serial and calculated data values
+\end{itemize}
+\clearpage

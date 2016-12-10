@@ -4,24 +4,78 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}The \emph {Arduino UNO}}{2}{section.1.1}
+\contentsline {section}{\numberline {1.1}The \emph {Arduino UNO}}{3}{section.1.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.1.1}Why Arduino?}{3}{subsection.1.1.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {paragraph}{\textit {Support -}}{3}{subsection.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\textit {Cost Effective -}}{3}{subsection.1.1.1}
+\contentsline {paragraph}{\textit {Cost Effective -}}{4}{subsection.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\textit {Features -}}{3}{subsection.1.1.1}
+\contentsline {paragraph}{\textit {Features -}}{4}{subsection.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Examples}{4}{section.1.2}
+\contentsline {subsection}{\numberline {1.1.2}Operation of Arduino}{5}{subsection.1.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subparagraph}{A Subparagraph}{4}{equation.1.2.1}
+\contentsline {section}{\numberline {1.2}The \textit {HC-SR04}{} \emph {Ultrasonic Sensor}{}}{5}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Chapter 2 name}{5}{chapter.2}
+\contentsline {subsection}{\numberline {1.2.1}Features}{5}{subsection.1.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Conclusion}{6}{chapter.3}
+\contentsline {subsubsection}{Note - Use of only stationary objects}{6}{table.caption.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Appendix A : \emph {Arduino}{} Code}{7}{appendix.A}
+\contentsline {subsection}{\numberline {1.2.2}HC-SR04 : Pin Definitions}{6}{subsection.1.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Appendix B : \emph {Processing}{} Code}{10}{appendix.B}
+\contentsline {subsection}{\numberline {1.2.3}Operation of the HC-SR04}{7}{subsection.1.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Calculation of distance}{7}{figure.caption.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{Need of calibration of the sensor}{8}{lstnumber.-1.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3} \emph {Micro-Servo}{} \textit {Motor}{}}{8}{section.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Circuit Schematics}{11}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Arduino Pin Connections}{11}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}Breadboard View}{11}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}Schematic view}{12}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Development and Simulation}{13}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Arduino IDE}{13}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Simulation with Proteus}{14}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}Processing}{14}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Explaining the Codes}{16}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}The Arduino Code}{16}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}The Processing Code}{18}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Observations}{19}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Calibration}{19}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.1}Calibration of Measurements}{19}{subsection.5.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1.2}Optimising Speed}{20}{subsection.5.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Graphs}{21}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Challenges}{24}{section.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Identified Problem}{24}{section.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.5}Proposed Solution}{24}{section.5.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Conclusion}{30}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Acknowledgements}{31}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}The Team}{32}{appendix.B}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {C}Appendix A : \emph {Arduino}{} Code}{33}{appendix.C}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {D}Appendix B : \emph {Processing}{} Code}{36}{appendix.D}

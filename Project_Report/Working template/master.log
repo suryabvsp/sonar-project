@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.27)  9 DEC 2016 10:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.27)  10 DEC 2016 14:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1249,6 +1249,10 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
+(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+\@enLab=\toks59
+)
 (/usr/share/texlive/texmf-dist/tex/latex/mdframed/mdframed.sty
 Package: mdframed 2013/07/01 1.9b: mdframed
 
@@ -1490,21 +1494,21 @@ Package zref Info: New property: mdf@pagevalue on input line 895.
 )
 
 Package hyperref Warning: Option `pdfpagelabels' has already been used,
-(hyperref)                setting the option has no effect on input line 177.
+(hyperref)                setting the option has no effect on input line 178.
 
-Package hyperref Info: Option `plainpages' set `false' on input line 177.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 177.
+Package hyperref Info: Option `plainpages' set `false' on input line 178.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 178.
 
-Package hyperref Info: Option `colorlinks' set `false' on input line 177.
+Package hyperref Info: Option `colorlinks' set `false' on input line 178.
 (/usr/share/texlive/texmf-dist/tex/latex/was/gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count370
-\float@exts=\toks59
+\float@exts=\toks60
 \float@box=\box62
-\@float@everytoks=\toks60
+\@float@everytoks=\toks61
 \@floatcapt=\box63
 )
 (./setup/hyphenations.tex) (./setup/macros.tex
@@ -1532,7 +1536,7 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 \@quotereset=\count375
 (./master.aux
 
-LaTeX Warning: Label `ch:appAlabel' multiply defined.
+LaTeX Warning: Label `fig:sermon' multiply defined.
 
 )
 \openout1 = `master.aux'.
@@ -1582,12 +1586,12 @@ LaTeX Info: Redefining \nameref on input line 21.
 \scratchbox=\box65
 \nofMPsegments=\count378
 \nofMParguments=\count379
-\everyMPshowfont=\toks61
+\everyMPshowfont=\toks62
 \MPscratchCnt=\count380
 \MPscratchDim=\dimen304
 \MPnumerator=\count381
 \makeMPintoPDFobject=\count382
-\everyMPtoPDFconversion=\toks62
+\everyMPtoPDFconversion=\toks63
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -1652,14 +1656,17 @@ Package biblatex Warning: Data encoding is 'utf8'.
 \openout3 = `master-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'master.bbl' not found.
-No file master.bbl.
+
+Package biblatex Warning: File 'master.bbl' created by wrong version.
+
+Package biblatex Info: ... file 'master.bbl' found.
+(./master.bbl)
 Package biblatex Info: Reference section=0 on input line 21.
 Package biblatex Info: Reference segment=0 on input line 21.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
 (lastpage)             ! on input line 21.
-ABD: EveryShipout initializing macros
+ ABD: EveryShipout initializing macros
 \c@lstlisting=\count383
 LaTeX Info: Redefining \celsius on input line 21.
 Package gensymb Info: Faking symbols for \degree and \celsius on input line 21.
@@ -1743,7 +1750,7 @@ LaTeX Font Warning: Font shape `OMS/pplx/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead on input line 5.
 
 
-Overfull \hbox (17.0pt too wide) in paragraph at lines 3--7
+Overfull \hbox (17.0pt too wide) in paragraph at lines 3--8
 [][] 
  []
 
@@ -1753,7 +1760,7 @@ Overfull \hbox (17.0pt too wide) in paragraph at lines 3--7
 \titlepageleftcolumnwidth=\skip155
 \titlepagerightcolumnwidth=\skip156
 
-<figures/logo2.jpeg, id=64, 790.152pt x 362.956pt>
+<figures/logo2.jpeg, id=164, 790.152pt x 362.956pt>
 File: figures/logo2.jpeg Graphic file (type jpg)
  <use figures/logo2.jpeg>
 Package pdftex.def Info: figures/logo2.jpeg used on input line 30.
@@ -1809,57 +1816,76 @@ Overfull \hbox (2.91003pt too wide) in paragraph at lines 30--30
 ])
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/pplx/b/n' tried instead on input line 31.
- (./master.toc
+ (./master.toc [5
+
+
+
+]
 LaTeX Font Info:    Font shape `T1/pplx/bx/it' in size <10> not available
-(Font)              Font shape `T1/pplx/b/it' tried instead on input line 25.
+(Font)              Font shape `T1/pplx/b/it' tried instead on input line 79.
 )
 \tf@toc=\write6
 \openout6 = `master.toc'.
 
  (./sections/introduction.tex
-[1
 
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
-
-]
+[1]
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/pplx/m/sl' in size <10> not available
-(Font)              Font shape `T1/pplx/m/it' tried instead on input line 10.
+(Font)              Font shape `T1/pplx/m/it' tried instead on input line 11.
+[2
+
+]
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/pplx/b/n' tried instead on input line 20.
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 22.
 LaTeX Font Info:    Font shape `T1/pplx/bx/it' in size <14.4> not available
-(Font)              Font shape `T1/pplx/b/it' tried instead on input line 20.
-<../Files/ArduinoUno_R3_Pinouts_600.png, id=91, 602.25pt x 463.7325pt>
-File: ../Files/ArduinoUno_R3_Pinouts_600.png Graphic file (type png)
+(Font)              Font shape `T1/pplx/b/it' tried instead on input line 22.
+ <../Files/arduino_parts.jpeg, id=226, 551.05875pt x 434.62375pt>
+File: ../Files/arduino_parts.jpeg Graphic file (type jpg)
 
-<use ../Files/ArduinoUno_R3_Pinouts_600.png>
-Package pdftex.def Info: ../Files/ArduinoUno_R3_Pinouts_600.png used on input l
-ine 23.
-(pdftex.def)             Requested size: 200.59193pt x 154.45445pt.
+<use ../Files/arduino_parts.jpeg>
+Package pdftex.def Info: ../Files/arduino_parts.jpeg used on input line 25.
+(pdftex.def)             Requested size: 200.59193pt x 158.20859pt.
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <9> not available
-(Font)              Font shape `T1/pplx/b/n' tried instead on input line 24.
- [2
-
- <../Files/ArduinoUno_R3_Pinouts_600.png>]
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <12> not available
-(Font)              Font shape `T1/pplx/b/n' tried instead on input line 31.
-LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/pplx/b/n' tried instead on input line 33.
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 35.
 LaTeX Font Info:    Font shape `T1/pplx/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/pplx/b/it' tried instead on input line 33.
+(Font)              Font shape `T1/pplx/b/it' tried instead on input line 35.
 
-Overfull \hbox (46.02844pt too wide) in paragraph at lines 41--76
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[3
+
+ <../Files/arduino_parts.jpeg>]
+Overfull \hbox (46.02844pt too wide) in paragraph at lines 43--78
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--83
-\T1/pplx/m/n/10 sen-sor -- the only two other de-vices be-ing used in the proje
-ct. 
+Underfull \hbox (badness 10000) in paragraph at lines 81--85
+\T1/pplx/m/n/10 sen-sor - the only two other de-vices be-ing used in the projec
+t. 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--83
+Underfull \hbox (badness 10000) in paragraph at lines 81--85
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
@@ -1869,20 +1895,120 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+[4] <../Files/HCSR04.jpg, id=237, 807.015pt x 538.01pt>
+File: ../Files/HCSR04.jpg Graphic file (type jpg)
 
+<use ../Files/HCSR04.jpg>
+Package pdftex.def Info: ../Files/HCSR04.jpg used on input line 94.
+(pdftex.def)             Requested size: 200.59193pt x 133.72227pt.
+
+Overfull \hbox (6.78366pt too wide) in paragraph at lines 104--133
+ [][] 
  []
 
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[5 <../Files/HCSR04.jpg>]
+<../Files/hcsr_timing.png, id=244, 828.09375pt x 316.18124pt>
+File: ../Files/hcsr_timing.png Graphic file (type png)
+
+<use ../Files/hcsr_timing.png>
+Package pdftex.def Info: ../Files/hcsr_timing.png used on input line 152.
+(pdftex.def)             Requested size: 200.59193pt x 76.58942pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[6]
 Package hyperref Info: bookmark level for unknown exa defaults to 0 on input li
-ne 88.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 94.
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+ne 165.
+Package mdframed Info: mdframed works in twoside mode on input line 167.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 168.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 98.
-)
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 170.
+Package mdframed Info: mdframed inside a box 
+ mdframed uses option nobreak mdframed on input line 184.
+
+Underfull \vbox (badness 10000) detected at line 185
+ []
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7 <../Files/hcsr_timing.png>]
+<../Files/tower-pro-sg90.jpg, id=260, 414.04688pt x 301.125pt>
+File: ../Files/tower-pro-sg90.jpg Graphic file (type jpg)
+
+<use ../Files/tower-pro-sg90.jpg>
+Package pdftex.def Info: ../Files/tower-pro-sg90.jpg used on input line 191.
+(pdftex.def)             Requested size: 160.47108pt x 116.7077pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8 <../Files/tower-pro-sg90.jpg>]
+<../Files/microservo.png, id=283, 229.85875pt x 149.55875pt>
+File: ../Files/microservo.png Graphic file (type png)
+
+<use ../Files/microservo.png>
+Package pdftex.def Info: ../Files/microservo.png used on input line 208.
+(pdftex.def)             Requested size: 160.47108pt x 104.41655pt.
+
+<../Files/proj.jpg, id=285, 2457.18pt x 3276.24pt>
+File: ../Files/proj.jpg Graphic file (type jpg)
+ <use ../Files/proj.jpg>
+Package pdftex.def Info: ../Files/proj.jpg used on input line 214.
+(pdftex.def)             Requested size: 160.47108pt x 213.9129pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9 <../Files/microservo.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10 <../Files/proj.jpg>]) (./sections/schematics.tex
+Chapter 2.
+<../Files/bboard.png, id=296, 1079.03125pt x 534.99875pt>
+File: ../Files/bboard.png Graphic file (type png)
+
+<use ../Files/bboard.png>
+Package pdftex.def Info: ../Files/bboard.png used on input line 25.
+(pdftex.def)             Requested size: 401.18387pt x 198.90971pt.
+
+<../Files/schematic.png, id=297, 963.6pt x 542.025pt>
+File: ../Files/schematic.png Graphic file (type png)
+
+<use ../Files/schematic.png>
+Package pdftex.def Info: ../Files/schematic.png used on input line 32.
+(pdftex.def)             Requested size: 401.18387pt x 225.66399pt.
+ [11
+
+
+ <../Files/bboard.png>])
 (./sections/ch2name.tex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1890,47 +2016,304 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4]
-Chapter 2.
-
-LaTeX Warning: Citation 'Madsen2010' on page 5 undefined on input line 2.
-
-
-LaTeX Warning: Citation 'Oetiker2010' on page 5 undefined on input line 2.
-
-
-LaTeX Warning: Citation 'Mittelbach2005' on page 5 undefined on input line 2.
-
-
-Overfull \hbox (2.0pt too wide) in paragraph at lines 3--4
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-) (./sections/conclusion.tex [5
-
-]
+[12 <../Files/schematic.png>]
 Chapter 3.
-)
+<../Files/IDE.png, id=312, 484.81125pt x 593.21625pt>
+File: ../Files/IDE.png Graphic file (type png)
+ <use ../Files/IDE.png>
+Package pdftex.def Info: ../Files/IDE.png used on input line 7.
+(pdftex.def)             Requested size: 200.59193pt x 245.44696pt.
 
-LaTeX Warning: Empty bibliography on input line 40.
+[13
 
-(./sections/appAname.tex [6
+ <../Files/IDE.png>]) (./sections/simulate.tex
+<../Files/proteus.png, id=319, 1028.34187pt x 555.57562pt>
+File: ../Files/proteus.png Graphic file (type png)
+
+<use ../Files/proteus.png>
+Package pdftex.def Info: ../Files/proteus.png used on input line 6.
+(pdftex.def)             Requested size: 280.82747pt x 151.71985pt.
+
+<../Files/processing.PNG, id=320, 1028.34187pt x 555.57562pt>
+File: ../Files/processing.PNG Graphic file (type png)
+
+<use ../Files/processing.PNG>
+Package pdftex.def Info: ../Files/processing.PNG used on input line 15.
+(pdftex.def)             Requested size: 280.82747pt x 151.71985pt.
+
+<../Files/radar.png, id=323, 450.9347pt x 545.78906pt>
+File: ../Files/radar.png Graphic file (type png)
+
+<use ../Files/radar.png>
+Package pdftex.def Info: ../Files/radar.png used on input line 23.
+(pdftex.def)             Requested size: 280.82747pt x 339.91808pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14
+
+ <../Files/proteus.png> <../Files/processing.PNG>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15 <../Files/radar.png>]) (./sections/code.tex
+Chapter 4.
+Package mdframed Info: mdframed works in twoside mode on input line 14.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 15.
+[16
+
 
 ]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[18
+
+]) (./sections/observations.tex
+Chapter 5.
+<../Files/sermon.png, id=384, 982.42032pt x 300.3722pt>
+File: ../Files/sermon.png Graphic file (type png)
+
+<use ../Files/sermon.png>
+Package pdftex.def Info: ../Files/sermon.png used on input line 6.
+(pdftex.def)             Requested size: 280.82747pt x 85.85904pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+<../Files/cabri.jpg, id=385, 3035.34pt x 3557.29pt>
+File: ../Files/cabri.jpg Graphic file (type jpg)
+ <use ../Files/cabri.jpg>
+Package pdftex.def Info: ../Files/cabri.jpg used on input line 21.
+(pdftex.def)             Requested size: 401.18387pt x 470.17168pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--23
+
+ []
+
+[19
+
+
+ <../Files/sermon.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[20 <../Files/cabri.jpg>]
+<../Files/save12.png, id=399, 489.32813pt x 301.125pt>
+File: ../Files/save12.png Graphic file (type png)
+
+<use ../Files/save12.png>
+Package pdftex.def Info: ../Files/save12.png used on input line 38.
+(pdftex.def)             Requested size: 320.94832pt x 197.5117pt.
+
+<../Files/save21.png, id=400, 489.32813pt x 301.125pt>
+File: ../Files/save21.png Graphic file (type png)
+
+<use ../Files/save21.png>
+Package pdftex.def Info: ../Files/save21.png used on input line 44.
+(pdftex.def)             Requested size: 320.94832pt x 197.5117pt.
+
+<../Files/save32.png, id=401, 489.32813pt x 301.125pt>
+File: ../Files/save32.png Graphic file (type png)
+
+<use ../Files/save32.png>
+Package pdftex.def Info: ../Files/save32.png used on input line 50.
+(pdftex.def)             Requested size: 320.94832pt x 197.5117pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[21 <../Files/save12.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[22 <../Files/save21.png> <../Files/save32.png>]
+<../Files/savew1.png, id=416, 489.32813pt x 301.125pt>
+File: ../Files/savew1.png Graphic file (type png)
+
+<use ../Files/savew1.png>
+Package pdftex.def Info: ../Files/savew1.png used on input line 58.
+(pdftex.def)             Requested size: 401.18387pt x 246.88733pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[23
+
+ <../Files/savew1.png>]) (./sections/challenges.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[24
+
+]
+Package mdframed Info: mdframed works in twoside mode on input line 13.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[25]
+File: ../Files/save12.png Graphic file (type png)
+ <use ../Files/save12.png>
+Package pdftex.def Info: ../Files/save12.png used on input line 43.
+(pdftex.def)             Requested size: 320.94832pt x 197.5117pt.
+
+<../Files/save11.png, id=454, 489.32813pt x 301.125pt>
+File: ../Files/save11.png Graphic file (type png)
+
+<use ../Files/save11.png>
+Package pdftex.def Info: ../Files/save11.png used on input line 45.
+(pdftex.def)             Requested size: 320.94832pt x 197.5117pt.
+File: ../Files/save21.png Graphic file (type png)
+ <use ../Files/save21.png>
+Package pdftex.def Info: ../Files/save21.png used on input line 51.
+(pdftex.def)             Requested size: 320.94832pt x 197.5117pt.
+
+<../Files/save20.png, id=455, 489.32813pt x 301.125pt>
+File: ../Files/save20.png Graphic file (type png)
+
+<use ../Files/save20.png>
+Package pdftex.def Info: ../Files/save20.png used on input line 53.
+(pdftex.def)             Requested size: 320.94832pt x 197.5117pt.
+File: ../Files/save32.png Graphic file (type png)
+ <use ../Files/save32.png>
+Package pdftex.def Info: ../Files/save32.png used on input line 59.
+(pdftex.def)             Requested size: 320.94832pt x 197.5117pt.
+
+<../Files/save31.png, id=456, 489.32813pt x 301.125pt>
+File: ../Files/save31.png Graphic file (type png)
+
+<use ../Files/save31.png>
+Package pdftex.def Info: ../Files/save31.png used on input line 61.
+(pdftex.def)             Requested size: 320.94832pt x 197.5117pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[26
+
+ <../Files/save11.png>]
+File: ../Files/savew1.png Graphic file (type png)
+ <use ../Files/savew1.png>
+Package pdftex.def Info: ../Files/savew1.png used on input line 67.
+(pdftex.def)             Requested size: 320.94832pt x 197.5117pt.
+
+<../Files/savew2.png, id=464, 489.32813pt x 301.125pt>
+File: ../Files/savew2.png Graphic file (type png)
+
+<use ../Files/savew2.png>
+Package pdftex.def Info: ../Files/savew2.png used on input line 69.
+(pdftex.def)             Requested size: 320.94832pt x 197.5117pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[27 <../Files/save20.png>]) (./sections/conclusion.tex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[28 <../Files/save31.png>]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[29 <../Files/savew2.png>]
+Chapter 6.
+[30
+
+]) (./sections/ack.tex
 Appendix A.
+[31
+
+
+]) (./sections/team.tex
+Appendix B.
+<../Files/team.jpg, id=491, 2055.68pt x 1541.76pt>
+File: ../Files/team.jpg Graphic file (type jpg)
+ <use ../Files/team.jpg>
+Package pdftex.def Info: ../Files/team.jpg used on input line 5.
+(pdftex.def)             Requested size: 200.59193pt x 150.42097pt.
+
+<../Files/project.png, id=492, 1371.1225pt x 770.88pt>
+File: ../Files/project.png Graphic file (type png)
+
+<use ../Files/project.png>
+Package pdftex.def Info: ../Files/project.png used on input line 11.
+(pdftex.def)             Requested size: 160.47108pt x 90.21965pt.
+
+<../Files/project2.jpg, id=493, 4175.6pt x 3131.7pt>
+File: ../Files/project2.jpg Graphic file (type jpg)
+
+<use ../Files/project2.jpg>
+Package pdftex.def Info: ../Files/project2.jpg used on input line 12.
+(pdftex.def)             Requested size: 160.47108pt x 120.32472pt.
+) (./sections/appAname.tex [32
+
+
+ <../Files/team.jpg> <../Files/project.png> <../Files/project2.jpg>]
+Appendix C.
 LaTeX Font Info:    Font shape `T1/pplx/bx/it' in size <24.88> not available
 (Font)              Font shape `T1/pplx/b/it' tried instead on input line 1.
 Package mdframed Info: mdframed works in twoside mode on input line 3.
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 4.
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 8.
-[7
+[33
 
 ]
 
@@ -1939,15 +2322,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8]
+[34]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[9]
-Appendix B.
+[35]
+Appendix D.
 Package mdframed Info: mdframed works in twoside mode on input line 92.
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -1964,7 +2347,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.29405pt on input line 276.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 276.
- [10
+ [36
 
 
 ]
@@ -1974,98 +2357,88 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11]
+[37]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12]
+[38]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13]
+[39]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[14]
+[40]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[15]
+[41]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[16])
+[42])
 \tf@thm=\write7
 \openout7 = `master.thm'.
 
  
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 44.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 44.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
 (./master.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 44.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 44.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: 38DA219B42EA14CD6B41C84AFB0E9826;639.
+(rerunfilecheck)             Checksum: 2E66FA318D9AAA2C1828078C94E992AF;2346.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
-
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                master
-(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'master.run.xml'.
 \openout1 = `master.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 44.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  )
 (\end occurred when \iftrue on line 21 was incomplete) 
 Here is how much of TeX's memory you used:
- 34964 strings out of 494374
- 632156 string characters out of 6164953
- 2728226 words of memory out of 5000000
- 37340 multiletter control sequences out of 15000+600000
- 85093 words of font info for 149 fonts, out of 8000000 for 9000
+ 35101 strings out of 494374
+ 633494 string characters out of 6164953
+ 2727594 words of memory out of 5000000
+ 37292 multiletter control sequences out of 15000+600000
+ 81804 words of font info for 144 fonts, out of 8000000 for 9000
  355 hyphenation exceptions out of 8191
- 64i,13n,95p,10468b,1831s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,13n,95p,10468b,1823s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/surya/.texmf-var/
-fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> </home/surya/.texmf-var/fonts/pk/lj
-four/jknappen/ec/ectt1000.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/
+fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/surya/.texmf-var/fonts/pk/lj
+four/jknappen/ec/ectt0900.600pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/
 base/8r.enc} </home/surya/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecss1000.600pk
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/
-uplri8a.pfb>
-Output written on master.pdf (20 pages, 543190 bytes).
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/palatino/uplri8a.pfb>
+Output written on master.pdf (47 pages, 9065588 bytes).
 PDF statistics:
- 729 PDF objects out of 1000 (max. 8388607)
- 572 compressed objects within 6 object streams
- 365 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1150 PDF objects out of 1200 (max. 8388607)
+ 900 compressed objects within 9 object streams
+ 504 named destinations out of 1000 (max. 500000)
+ 431 words of extra memory for PDF output out of 10000 (max. 10000000)
 

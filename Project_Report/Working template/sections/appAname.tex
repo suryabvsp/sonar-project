@@ -74,7 +74,7 @@ duration = pulseIn(echoPin, HIGH); // Reads the echoPin, returns the sound wave 
 distance = (duration/2)/29.1;     //in cm,  datasheet gives "duration/58" as the formula
 
 //To avoid sending data at variable time intervals due to varying time duration taken between execution of above code inside this function depending on distance of obstacle
-//if no object, echo pulse is 38ms long HIGH
+//if no object, echo pulse is HIGH after 38ms
 while(micros()-T1<38000)
 {
 ;
@@ -87,7 +87,7 @@ return distance;
 \end{mdframed}
 \clearpage
 
-\chapter{Appendix B : \processing{} Code}\label{ch:appAlabel}
+\chapter{Appendix B : \processing{} Code}\label{ch:appBlabel}
 The \emph{Java} code that we ran in \processing{} is given below :
 \begin{mdframed}[backgroundcolor=light-gray, roundcorner=10pt,leftmargin=1, rightmargin=1, innerleftmargin=15, innertopmargin=15,innerbottommargin=15, outerlinewidth=1, linecolor=light-gray]
 \begin{lstlisting}[caption={The Processing Code}, language=Java]
