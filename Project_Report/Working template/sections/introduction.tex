@@ -154,7 +154,7 @@ The \emph{Trig} and \emph{Echo} pins are used for tranmission and reception of u
 \end{figure}
 The timing diagram of HC-SR04 is shown in Figure \ref{fig:HCSRTiming}. To start measurement, Trig of SR04 must receive a HIGH pulse (5V) for at least 10us, which will initiate the sensor to transmit 8 cycles of ultrasonic burst at 40kHz. It then waits for the reflected ultrasonic wave. When the sensor detects the ultrasonic wave through the receiver, it will set the Echo pin to HIGH (5V), for as long as it detects an incoming ultrasonic pulse at the receiver.
 \subsubsection{Calculation of distance}
-The delay between tranmission and reception of the final pulse (i.e., between when the Trig pin is set back to LOW and when the Echo pin turns HIGH) is a time period proportional to the distance travelled by it. To obtain the distance, we start a counter the moment the Trig pin is set to LOW which keeps counting till the microcontroller detects a HIGH pulse at the Echo pin.
+The delay between tranmission and reception of the final pulse (i.e., between when the Trig pin is set back to LOW and when the Echo pin turns HIGH) is a time period proportional to the distance travelled by it. To obtain the distance, we start a timer the moment the Trig pin is set to LOW which keeps running till the microcontroller detects a HIGH pulse at the Echo pin.
 Time = Width of pulse, in uS (micro second).
 \begin{itemize}
 	\item Distance in centimeters = Time / 58
